@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>電卓</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="app1">
+    <p>{{ message }}</p>
+    <button v-on:click="num(0)">0</button>
+    <button v-on:click="num(1)">1</button>
+    <button v-on:click="num(2)">2</button>
+    <button v-on:click="num(3)">3</button>
+    <button v-on:click="num(4)">4</button>
+    <button v-on:click="num(5)">5</button>
+    <button v-on:click="num(6)">6</button>
+    <button v-on:click="num(7)">7</button>
+    <button v-on:click="num(8)">8</button>
+    <button v-on:click="num(9)">9</button>
+    <button v-on:click="cal('+')">+</button>
+    <button v-on:click="cal('-')">-</button>
+    <button v-on:click="cal('x')">x</button>
+    <button v-on:click="cal('÷')">÷</button>
+    <button v-on:click="ans()"> = </button>
+    <button v-on:click="reset()"> AC </button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js"></script>
+</body>
+</html>
