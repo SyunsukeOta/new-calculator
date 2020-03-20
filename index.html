@@ -11,28 +11,16 @@
     <p class="display">{{ message }}</p>
     <div id="buttons">
       <div class="row">
-        <button v-on:click="num(7)">7</button>
-        <button v-on:click="num(8)">8</button>
-        <button v-on:click="num(9)">9</button>
-        <button v-on:click="cal('÷')">÷</button>
+        <calc-button v-for="item in list.list1" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
       </div>
       <div class="row">
-        <button v-on:click="num(4)">4</button>
-        <button v-on:click="num(5)">5</button>
-        <button v-on:click="num(6)">6</button>
-        <button v-on:click="cal('x')">x</button>
+        <calc-button v-for="item in list.list2" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
       </div>
       <div class="row">
-        <button v-on:click="num(2)">2</button>
-        <button v-on:click="num(3)">3</button>
-        <button v-on:click="num(1)">1</button>
-        <button v-on:click="cal('-')">-</button>
+        <calc-button v-for="item in list.list3" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
       </div>
       <div class="row">
-        <button v-on:click="num(0)">0</button>
-        <button v-on:click="reset()"> AC </button>
-        <button v-on:click="ans()"> = </button>
-        <button v-on:click="cal('+')">+</button>
+        <calc-button v-for="item in list.list4" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
       </div>
     </ul>
   </div>
