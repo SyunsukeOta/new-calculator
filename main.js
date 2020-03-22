@@ -107,7 +107,7 @@ var app1 = new Vue({
         case 3:
           return this.prev * this.curr
         case 4:
-          return this.prev / this.curr
+          return (this.prev / this.curr).toFixed(4)
         default:
           return this.curr
       }
