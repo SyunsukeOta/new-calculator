@@ -48,9 +48,9 @@ var app1 = new Vue({
   },
   methods: {
     num: function(n) {
-      
       if (this.equa == 1) {
         this.curr = 0
+        this.equa = 0
       }
       this.curr = this.curr*10 + n
       this.message = String(this.curr)
@@ -72,7 +72,7 @@ var app1 = new Vue({
       this.curr = 0
       this.prev = 0
       this.calc = 0
-      this.message = 0
+      this.message = '0'
       this.equa = 0
     },
     changeNum: function(c) {
