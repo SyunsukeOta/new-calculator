@@ -18,6 +18,7 @@ var app1 = new Vue({
     equa: 0,
     calc: 0,
     message: '0',
+    keyNum: 0,
     list: {
       list1: [
         { id: 1, name: '7', type: 'num', order: '7'},
@@ -111,6 +112,68 @@ var app1 = new Vue({
         default:
           return this.curr
       }
+    },
+    keyAction(e) {
+      console.log(e.keyCode);
+      this.keyNum = e.keyCode
+      switch (this.keyNum) {
+        case 48:
+          this.num(0)
+          break;
+        case 49:
+          this.num(1)
+          break;
+        case 50:
+          this.num(2)
+          break;
+        case 51:
+          this.num(3)
+          break;
+        case 52:
+          this.num(4)
+          break;
+        case 53:
+          this.num(5)
+          break;
+        case 54:
+          this.num(6)
+          break;
+        case 55:
+          this.num(7)
+          break;
+        case 56:
+          this.num(8)
+          break;
+        case 57:
+          this.num(9)
+          break;
+        case 43:
+          this.cal(1)
+          break;
+        case 45:
+          this.cal(2)
+          break;
+        case 42:
+          this.cal(3)
+          break;
+        case 47:
+          this.cal(4)
+          break;
+        case 61:
+          this.ans(1)
+          break;
+        case 99:
+          this.reset(1)
+          break;
+      }
     }
+  },
+  created() {
+    //キーコードによる動作の登録
+    document.addEventListener("keypress", this.keyAction);
+  },
+  beforeDestroy() {
+    //キーコードによる動作の削除
+    document.removeEventListener("keypress", this.keyAction);
   }
 })
