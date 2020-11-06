@@ -10,19 +10,10 @@
   <div id="app1" class="container">
     <p class="display">{{ message }}</p>
     <div id="buttons">
-      <div class="row">
-        <calc-button v-for="item in list.list1" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
+      <div class="row" v-for="rows in list">
+        <calc-button v-for="item in rows" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
       </div>
-      <div class="row">
-        <calc-button v-for="item in list.list2" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
-      </div>
-      <div class="row">
-        <calc-button v-for="item in list.list3" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
-      </div>
-      <div class="row">
-        <calc-button v-for="item in list.list4" v-bind:key="item.id" v-bind:name="item.name" v-bind:type="item.type" v-bind:order="item.order" v-on:num="num" v-on:cal="cal" v-on:ans="ans" v-on:reset="reset"></calc-button>
-      </div>
-    </ul>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="main.js"></script>

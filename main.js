@@ -19,32 +19,32 @@ var app1 = new Vue({
     calc: 0,
     message: '0',
     keyNum: 0,
-    list: {
-      list1: [
+    list: [
+      [
         { id: 1, name: '7', type: 'num', order: '7'},
         { id: 2, name: '8', type: 'num', order: '8'},
         { id: 3, name: '9', type: 'num', order: '9'},
         { id: 4, name: '÷', type: 'cal', order: '4'}
       ],
-      list2: [
+      [
         { id: 1, name: '4', type: 'num', order: '4'},
         { id: 2, name: '5', type: 'num', order: '5'},
         { id: 3, name: '6', type: 'num', order: '6'},
         { id: 4, name: 'x', type: 'cal', order: '3'}
       ],
-      list3: [
+      [
         { id: 1, name: '1', type: 'num', order: '1'},
         { id: 2, name: '2', type: 'num', order: '2'},
         { id: 3, name: '3', type: 'num', order: '3'},
         { id: 4, name: '-', type: 'cal', order: '2'},
       ],
-      list4: [
+      [
         { id: 1, name: '0', type: 'num', order: '0'},
         { id: 2, name: 'AC', type: 'reset', order: '1'},
         { id: 3, name: '=', type: 'ans', order: '1'},
         { id: 4, name: '+', type: 'cal', order: '1'},
       ]
-    }
+    ]
   },
   methods: {
     num: function(n) {
